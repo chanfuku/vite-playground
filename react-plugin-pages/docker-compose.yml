@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  vite:
+    image: node:16.13.2-alpine3.14
+    volumes:
+      - ./:/vite
+    working_dir: /vite/sample-app
+    tty: true
+    ports:
+      - 8080:8080
+    command: npm run dev
